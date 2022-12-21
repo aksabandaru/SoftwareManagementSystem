@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add student</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+body{
+margin:0;
+padding:0;
+background:#262626;
+}
+.rating{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) rotateY(180deg);
+display:flex;
+}
+.rating input{
+display:none;
+}
+.rating label{
+display: block;
+cursor:pinter;
+width:50px;
+background:#ccc;
+}
+.rating label:before{
+content:'\f005 ';
+font-family:fontAwesome;
+position:relative;
+display:block;
+font-size:50px;
+}
+.rating label:after{
+content:'\f005 ';
+font-family:fontAwesome;
+position:absolute;
+display:block;
+font-size:50px;
+color:#1f9cff;
+top:0;
+opacity:0;
+transition:.5s;
+text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+.rating label:hover:after,
+.rating input:hover ~ label:after,
+.rating input:checked ~ label:after
+{
+opacity:1;
+
+}
+h2{
+color:red;
+text-align:center;
+padding-top: 200px;
+}
+#btn{
+color:white;
+padding-left:700px;
+}
+
+</style>
+
+</head>
+
+<body>
+<h2 > Rate us</h2>
+<div class="rating">
+<input type="radio" name="rating1" id="rading1">
+<label for="rating1"></label>
+<input type="radio" name="rating1" id="rating2">
+<label for="rating2" ></label>
+<input type="radio" name="rating1" id="rating3">
+<label for="rating3" ></label>
+<input type="radio" name="rating1" id="rating4">
+<label for="rating4" ></label>
+<input type="radio" name="rating1" id="rating5">
+<label for="rating5" ></label>
+</div>
+
+	</body>
+</html>

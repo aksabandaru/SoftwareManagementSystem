@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add student</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+body{
+background-image:
+url('https://static01.nyt.com/images/2020/06/09/world/09virus-italy2/09virus-italy2-mobileMasterAt3x.jpg');
+}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<h1>update new Software</h1>
+		</div>
+<div class="card-body">
+			<form th:action="@{/updateAndSave/{id} (id = ${updateSoftware.id})}" th:object="${updateSoftware}" method="post">
+				<div class="form-group">
+					<label> Enter Software Name: </label> <input type="text" name="sName" th:field="*{softwarename}" class="form-control" placeholder="Enter your softwarename">
+						
+						<label> Enter ComapnyName: </label> 
+							<input type="text" name="lName" th:field="*{companyname}" class="form-control" placeholder="Enter your companyname"> 
+						
+						<label>Enter Description: </label> 
+						<input type="text" name="des" th:field="*{description}" class="form-control" placeholder="Enter your description">
+						<label> Enter Stock: </label> 
+							<input type="text" name="stock" th:field="*{stock}" class="form-control" placeholder="Enter your stock"> 
+						
+						<label>Enter Price: </label> 
+						<input type="text" name="price" th:field="*{price}" class="form-control" placeholder="Enter your price">
+		
+				</div>
+				
+				<div class="box-footer">
+				<button type="submit" class="btn btn-primary">
+				save
+				</button>
+				
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
